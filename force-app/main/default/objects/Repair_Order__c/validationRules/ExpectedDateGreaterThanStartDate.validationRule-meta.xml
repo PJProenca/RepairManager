@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpectedDateGreaterThanStartDate</fullName>
+    <active>true</active>
+    <description>To prevent the expected end date to be lesser than start date</description>
+    <errorConditionFormula>Expected_End_Date__c  &lt;  Start_Date__c</errorConditionFormula>
+    <errorDisplayField>Expected_End_Date__c</errorDisplayField>
+    <errorMessage>You can expected to finish before starting right?</errorMessage>
+</ValidationRule>
