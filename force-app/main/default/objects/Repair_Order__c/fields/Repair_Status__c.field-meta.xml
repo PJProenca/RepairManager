@@ -26,6 +26,11 @@
                 <default>false</default>
                 <label>Finished</label>
             </value>
+            <value>
+                <fullName>Behind Schedule</fullName>
+                <default>false</default>
+                <label>Behind Schedule</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT( Repair_Status__c ) = &quot;Finished&quot; || TODAY() &lt;=  Expected_End_Date__c, IMAGE(&quot;/img/samples/color_green.gif&quot;,&quot;green&quot;,15,30),
+
+IF(TEXT( Repair_Status__c ) &lt;&gt; &quot;Finished&quot; &amp;&amp; TODAY() &lt;=  Expected_End_Date__c + 3, IMAGE(&quot;/img/samples/color_yellow.gif&quot;,&quot;yellow&quot;,15,30),
+
+IF(TEXT( Repair_Status__c ) &lt;&gt; &quot;Finished&quot; &amp;&amp; TODAY() &gt;  Expected_End_Date__c + 3, IMAGE(&quot;/img/samples/color_red.gif&quot;,&quot;red&quot;,15,30),&quot;&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Condition</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
