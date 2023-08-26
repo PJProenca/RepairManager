@@ -1,0 +1,29 @@
+<template>
+    <div>
+        <div>
+            <div>
+                <lightning-combobox
+                    name="Techs"
+                    label="Techs"
+                    onchange={handleTechs}
+                    placeholder="Select tech"
+                    options={picklistValues}
+                    ></lightning-combobox>
+            </div>
+            <div>
+            <template if:true={techsFilter}>
+                <lightning-datatable
+                    key-field="id"
+                    data={techsFilter}                    
+                    columns={col}
+                    hide-checkbox-column
+                    >
+                </lightning-datatable>
+
+            </template>    
+            </div>
+        
+        </div>
+    </div>
+    
+</template>
